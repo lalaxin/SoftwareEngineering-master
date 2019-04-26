@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditMsgActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        >
+
+        <EditText
+            android:id="@+id/text_receiver"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="收信人"
+            android:inputType="textPersonName"
+            android:textColorLink="@color/bootstrap_gray" />
+
+        <ImageView
+            android:id="@+id/btn_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            app:srcCompat="@drawable/ic_person_black_24dp" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/text_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:roundedCorners="true"
+            app:bootstrapBrand="primary"/>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btn_send"
+            android:text="发送"
+            android:layout_marginLeft="3dp"
+            app:roundedCorners="true"
+            app:bootstrapBrand="primary"
+            android:hint="短信"/>
+
+    </LinearLayout>
+
+</LinearLayout>
